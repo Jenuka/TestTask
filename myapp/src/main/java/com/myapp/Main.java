@@ -78,7 +78,6 @@ public class Main {
                         break;
                 }
             }
-            // Close the connection
             connection.close();
             System.out.println("Соединение закрыто.");
         } catch (Exception e) {
@@ -121,8 +120,8 @@ public class Main {
     }
 
     /**
-     * Предоставляет меню для выбора способов отображения информации о погоде
-     * Также, показывает настройки фильтра
+     * Предоставляет меню для выбора способов отображения информации о погоде, 
+     * показывает настройки фильтра
      */
     public static void showData() {
         try {
@@ -207,7 +206,7 @@ public class Main {
     }
 
     /**
-     * Отвечает за изменение настроек фильтра Отображает текущие настройки и
+     * Отвечает за изменение настроек фильтра. Отображает текущие настройки и
      * позволяет изменить каждую из них. Имеется возможность сброса всех
      * фильтров
      */
@@ -264,7 +263,7 @@ public class Main {
                 switch (choice) {
                     case "1":
                         System.out.println("Изменение выбранного города");
-                        System.out.println("Введите название города, или оставьте пустым для снятия выбора");
+                        System.out.println("Введите название города, или оставьте пустым для снятия выбора:");
                         String newFilterCity = System.console().readLine();
                         if (newFilterCity.isEmpty()) {
                             querySettings.setCityName(null);
