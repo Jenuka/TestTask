@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-09T14:12:41.929189300Z</date>
+  <millis>1754748761929</millis>
+  <nanos>189300</nanos>
+  <sequence>0</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.example.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>error2.log (Не удается найти указанный файл)</message>
+</record>
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-09T14:14:49.389351300Z</date>
+  <millis>1754748889389</millis>
+  <nanos>351300</nanos>
+  <sequence>0</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.example.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>error2.log (Не удается найти указанный файл)</message>
+</record>
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-09T14:59:45.705627100Z</date>
+  <millis>1754751585705</millis>
+  <nanos>627100</nanos>
+  <sequence>0</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.example.AutoUpdater</class>
+  <method>ShowCitiesInAutoUpdate</method>
+  <thread>1</thread>
+</record>
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-09T15:05:29.541013100Z</date>
+  <millis>1754751929541</millis>
+  <nanos>13100</nanos>
+  <sequence>0</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.example.Main</class>
+  <method>UpdateSettings</method>
+  <thread>1</thread>
+  <message>Text '11-11-11 11:11:11' could not be parsed at index 0</message>
+</record>
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-09T15:07:59.201128500Z</date>
+  <millis>1754752079201</millis>
+  <nanos>128500</nanos>
+  <sequence>0</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.example.Main</class>
+  <method>UpdateSettings</method>
+  <thread>1</thread>
+  <message>Text '11-11-11 11:11:11' could not be parsed at index 0</message>
+</record>
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-09T15:09:43.450585100Z</date>
+  <millis>1754752183450</millis>
+  <nanos>585100</nanos>
+  <sequence>0</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.example.Main</class>
+  <method>UpdateSettings</method>
+  <thread>1</thread>
+  <message>Text '1111-11-11 10:10:10' could not be parsed at index 10</message>
+</record>
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-10T11:55:31.094382400Z</date>
+  <millis>1754826931094</millis>
+  <nanos>382400</nanos>
+  <sequence>0</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.example.UpdateThread</class>
+  <method>GetData</method>
+  <thread>24</thread>
+  <message>Illegal character in query at index 82: http://api.weatherapi.com/v1/current.json?key=b17ca7dae9154582a1d71445250808&amp;q=New York&amp;aqi=no</message>
+</record>
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-10T13:03:42.306717100Z</date>
+  <millis>1754831022306</millis>
+  <nanos>717100</nanos>
+  <sequence>0</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.example.Main</class>
+  <method>allDataByCity</method>
+  <thread>1</thread>
+  <message>ОШИБКА: значение поля типа date/time вне диапазона: "2222-22-22"
+  Подсказка: Возможно, вам нужно изменить настройку "datestyle".
+  Позиция: 75</message>
+</record>
