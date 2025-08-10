@@ -1,0 +1,4 @@
+Username=postgres
+Password=0574
+Url=jdbc:postgresql://localhost:5432/testdb
+API=b17ca7dae9154582a1d71445250808

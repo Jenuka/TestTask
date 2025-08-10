@@ -29,10 +29,17 @@ public class Main {
     public static void main(String[] args) {
         
         try {
-            String jdbcURL = "jdbc:postgresql://localhost:5432/testdb";
-            String username = "postgres";
-            String password = "0574";
-            String key = "b17ca7dae9154582a1d71445250808";
+            BufferedReader reader = new BufferedReader(new FileReader("config.txt"));
+            String line;
+            line = reader.readLine();
+            String username = line.substring(line.indexOf("=")+1);
+            line = reader.readLine();
+            String password = line.substring(line.indexOf("=")+1);
+            line = reader.readLine();
+            String jdbcURL = line.substring(line.indexOf("=")+1);
+            line = reader.readLine();
+            String key = line.substring(line.indexOf("=")+1);
+            reader.close();
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(jdbcURL, username, password);
             System.out.println("Соединение с базой данных установлено");
@@ -92,7 +99,7 @@ public class Main {
             String choice = System.console().readLine();
             switch (choice) {
                 case "1":
-                    System.out.println("введите название города (на английском языке)");
+                    System.out.println("Введите название города (на английском языке)");
                     String newCity = System.console().readLine();
                     if (newCity.isEmpty()) {
                         System.out.println("Название города не может быть пустым");
@@ -247,8 +254,8 @@ public class Main {
                 System.out.println("1: Изменить выбранный город");
                 System.out.println("2: Изменить максимальную температуру");
                 System.out.println("3: Изменить минимальную температуру");
-                System.out.println("4: Изменить максимальное время");
-                System.out.println("5: Изменить минимальное время");
+                System.out.println("4: Изменить максимальное (самое позднее) время");
+                System.out.println("5: Изменить минимальное (самое ранее) время");
                 System.out.println("6: Изменить критерий для сортировки");
                 System.out.println("7: Изменить направление сортировки");
                 System.out.println("8: Сбросить настройки");
@@ -288,19 +295,6 @@ public class Main {
                         }
                         break;
                     case "4":
-                        System.out.println("Изменение выбранного минимального времени получения данных");
-                        System.out.println("Формат: ГГГГ-ММ-ДД ЧЧ:ММ:СС");
-                        System.out.println("Введите новое минимальное время или оставьте пустым для снятия выбора:");
-                        String mintimeString = System.console().readLine();
-                        if (mintimeString.isEmpty()) {
-                            querySettings.setMinTime(null);
-                        } else {
-                            mintimeString = mintimeString.replace(' ', 'T');
-                            LocalDateTime newMinTime = LocalDateTime.parse(mintimeString);
-                            querySettings.setMinTime(newMinTime);
-                        }
-                        break;
-                    case "5":
                         System.out.println("Изменение выбранного максимального времени получения данных");
                         System.out.println("Формат: ГГГГ-ММ-ДД ЧЧ:ММ:СС");
                         System.out.println("Введите новое максимальное время или оставьте пустым для снятия выбора:");
@@ -311,6 +305,19 @@ public class Main {
                             maxtimeString = maxtimeString.replace(' ', 'T');
                             LocalDateTime newMaxTime = LocalDateTime.parse(maxtimeString);
                             querySettings.setMaxTime(newMaxTime);
+                        }
+                        break;
+                    case "5":
+                        System.out.println("Изменение выбранного минимального времени получения данных");
+                        System.out.println("Формат: ГГГГ-ММ-ДД ЧЧ:ММ:СС");
+                        System.out.println("Введите новое минимальное время или оставьте пустым для снятия выбора:");
+                        String mintimeString = System.console().readLine();
+                        if (mintimeString.isEmpty()) {
+                            querySettings.setMinTime(null);
+                        } else {
+                            mintimeString = mintimeString.replace(' ', 'T');
+                            LocalDateTime newMinTime = LocalDateTime.parse(mintimeString);
+                            querySettings.setMinTime(newMinTime);
                         }
                         break;
                     case "6":
@@ -411,9 +418,8 @@ public class Main {
      * этот город из списка на автообновление
      */
     public static void deleteCity() {
-        //с проверкой на автообновление
         try {
-            System.out.println("Введите название города для удаления всех данных о нём,"
+            System.out.println("Введите название города для удаления всех данных о нём, "
                     + "он также будет удалён из списка для автообновления, если он там находится.");
             String cityToDelete = System.console().readLine();
             Statement statement = connection.createStatement();
@@ -471,10 +477,12 @@ public class Main {
             String cityTempDataSQL = "SELECT CityName, AVG(Temperature) as AvgTemp FROM Weather_Reports WHERE CityName = '"
                     + cityToFindAvgTemp + "' GROUP BY cityname";
             ResultSet resultSet = statement.executeQuery(cityTempDataSQL);
-            System.out.println("Средняя температура по городу " + cityToFindAvgTemp);
             if (resultSet.next()) {
                 System.out.println("Название города: " + resultSet.getString("CityName")
                         + " Средняя температура воздуха: " + resultSet.getDouble("AvgTemp"));
+            }
+            else{
+                System.out.println("Данные не найдены");
             }
             System.console().readLine();
         } catch (Exception e) {
@@ -508,6 +516,8 @@ public class Main {
             if (resultSet.next()) {
                 System.out.println("Минимальная температура по городу " + resultSet.getString("CityName")
                         + ": " + resultSet.getDouble("Temperature"));
+            } else {
+                System.out.println("Данные не найдены");
             }
             System.console().readLine();
         } catch (Exception e) {

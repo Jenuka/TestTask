@@ -95,7 +95,7 @@ public class QuerySettings {
      * данных
      */
     public void setMaxTemperature(Double newMaxTemperature) {
-        if (minTemperature == null || newMaxTemperature >= minTemperature) {
+        if (newMaxTemperature == null || minTemperature == null || newMaxTemperature >= minTemperature) {
             this.maxTemperature = newMaxTemperature;
         } else {
             System.out.println("Максимальная температура должна быть больше или равна минимальной");
@@ -122,7 +122,7 @@ public class QuerySettings {
      * данных
      */
     public void setMinTemperature(Double newMinTemperature) {
-        if (maxTemperature == null || newMinTemperature <= maxTemperature) {
+        if (newMinTemperature == null || maxTemperature == null || newMinTemperature <= maxTemperature) {
             this.minTemperature = newMinTemperature;
         } else {
             System.out.println("Минимальная температура должна быть меньше или равна минимальной");
@@ -147,7 +147,7 @@ public class QuerySettings {
      * данных
      */
     public void setMinTime(LocalDateTime newMinTime) {
-        if (maxTime == null || newMinTime.isBefore(maxTime)) {
+        if (newMinTime == null || maxTime == null || newMinTime.isBefore(maxTime)) {
             this.minTime = newMinTime;
         } else {
             System.out.println("Минимальное время должно быть раньше максимального");
@@ -172,7 +172,7 @@ public class QuerySettings {
      * данных
      */
     public void setMaxTime(LocalDateTime newMaxTime) {
-        if (minTime == null || newMaxTime.isAfter(minTime)) {
+        if (newMaxTime == null || minTime == null || newMaxTime.isAfter(minTime)) {
             this.maxTime = newMaxTime;
         } else {
             System.out.println("Максимальное время должно быть позже минимального");

@@ -123,3 +123,47 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 </log>
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-10T18:18:48.289668500Z</date>
+  <millis>1754849928289</millis>
+  <nanos>668500</nanos>
+  <sequence>0</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.myapp.Main</class>
+  <method>minAndMaxTempByCityDay</method>
+  <thread>1</thread>
+  <message>ОШИБКА: неверный синтаксис для типа date: "1000"
+  Позиция: 98</message>
+</record>
+<record>
+  <date>2025-08-10T18:29:04.887826600Z</date>
+  <millis>1754850544887</millis>
+  <nanos>826600</nanos>
+  <sequence>1</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.myapp.Main</class>
+  <method>updateSettings</method>
+  <thread>1</thread>
+  <message>Cannot invoke "java.lang.Double.doubleValue()" because "newMaxTemperature" is null</message>
+</record>
+<record>
+  <date>2025-08-10T18:30:37.585662100Z</date>
+  <millis>1754850637585</millis>
+  <nanos>662100</nanos>
+  <sequence>2</sequence>
+  <logger>weather</logger>
+  <level>SEVERE</level>
+  <class>com.myapp.Main</class>
+  <method>updateSettings</method>
+  <thread>1</thread>
+  <message>Cannot invoke "java.lang.Double.doubleValue()" because "newMaxTemperature" is null</message>
+</record>
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
