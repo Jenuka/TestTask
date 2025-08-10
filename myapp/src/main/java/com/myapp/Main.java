@@ -27,14 +27,13 @@ public class Main {
      * Осуществляет начальные настройки, предоставляет главное меню приложения
      */
     public static void main(String[] args) {
-        String jdbcURL = "jdbc:postgresql://localhost:5432/testdb";
-        String username = "postgres";
-        String password = "0574";
-        String key = "b17ca7dae9154582a1d71445250808";
+        
         try {
-            // Load the PostgreSQL JDBC driver
+            String jdbcURL = "jdbc:postgresql://localhost:5432/testdb";
+            String username = "postgres";
+            String password = "0574";
+            String key = "b17ca7dae9154582a1d71445250808";
             Class.forName("org.postgresql.Driver");
-            // Establish the connection
             connection = DriverManager.getConnection(jdbcURL, username, password);
             System.out.println("Соединение с базой данных установлено");
             LogManager.getLogManager().reset();

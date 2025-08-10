@@ -1,0 +1,26 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="Евгений (generated)" id="1754848180015-1">
+        <createTable tableName="auto_update_city">
+            <column name="cityname" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="auto_update_city_pkey"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Евгений (generated)" id="1754848180015-2">
+        <createTable tableName="weather_reports">
+            <column name="cityname" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="temperature" type="FLOAT8">
+                <constraints nullable="false"/>
+            </column>
+            <column name="time" type="TIMESTAMP WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="weather" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

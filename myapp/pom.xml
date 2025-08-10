@@ -55,6 +55,18 @@
                 </configuration>
             </plugin>
 
+            <plugin>  
+                <groupId>org.liquibase</groupId>  
+                <artifactId>liquibase-maven-plugin</artifactId>  
+                <version>4.33.0</version>  
+                <configuration>  
+                    <changeLogFile>changelog.xml</changeLogFile>
+                    <username>postgres</username>
+                    <password>0574</password>
+                    <url>jdbc:postgresql://localhost:5432/testdb</url> 
+                    <outputChangeLogFile>changelog.xml</outputChangeLogFile> 
+                </configuration>  
+            </plugin>
         </plugins>
     </build>
 
