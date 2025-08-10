@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.myapp","l":"AutoUpdater"},{"p":"com.myapp","l":"AutoUpdateTimer"},{"p":"com.myapp","l":"Main"},{"p":"com.myapp","l":"QuerySettings"},{"p":"com.myapp","l":"Updater"},{"p":"com.myapp","l":"UpdateThread"},{"p":"com.myapp","l":"WeatherReport"}];updateSearchResults();

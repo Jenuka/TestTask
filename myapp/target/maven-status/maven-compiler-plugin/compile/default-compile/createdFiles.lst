@@ -1,0 +1,7 @@
+com\myapp\QuerySettings.class
+com\myapp\Main.class
+com\myapp\UpdateThread.class
+com\myapp\WeatherReport.class
+com\myapp\Updater.class
+com\myapp\AutoUpdateTimer.class
+com\myapp\AutoUpdater.class

@@ -1,0 +1,50 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-classpath
+'C:/Users/Евгений/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar;C:/Users/Евгений/.m2/repository/junit/junit/4.10/junit-4.10.jar;C:/Users/Евгений/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar;C:/Users/Евгений/.m2/repository/org/postgresql/postgresql/42.7.7/postgresql-42.7.7.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'f:/123/111/TestTask/myapp/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'f:/123/111/TestTask/myapp/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'myapp 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'myapp 1.0-SNAPSHOT API'
+com.myapp
+C:\Users\Евгений\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar = 1754636929768
+C:\Users\Евгений\.m2\repository\junit\junit\4.10\junit-4.10.jar = 1754636854230
+C:\Users\Евгений\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar = 1754636854271
+C:\Users\Евгений\.m2\repository\org\postgresql\postgresql\42.7.7\postgresql-42.7.7.jar = 1753948879191
+f:\123\111\TestTask\myapp\src\main\java = 1754217963542
+f:\123\111\TestTask\myapp\target\reports\apidocs\allclasses-index.html = 1754844683771
+f:\123\111\TestTask\myapp\target\reports\apidocs\allpackages-index.html = 1754844683790
+f:\123\111\TestTask\myapp\target\reports\apidocs\element-list = 1754844683709
+f:\123\111\TestTask\myapp\target\reports\apidocs\help-doc.html = 1754844683835
+f:\123\111\TestTask\myapp\target\reports\apidocs\index-all.html = 1754844683819
+f:\123\111\TestTask\myapp\target\reports\apidocs\index.html = 1754844683819
+f:\123\111\TestTask\myapp\target\reports\apidocs\jquery-ui.overrides.css = 1754844683913
+f:\123\111\TestTask\myapp\target\reports\apidocs\member-search-index.js = 1754844683803
+f:\123\111\TestTask\myapp\target\reports\apidocs\module-search-index.js = 1754844683790
+f:\123\111\TestTask\myapp\target\reports\apidocs\overview-tree.html = 1754844683740
+f:\123\111\TestTask\myapp\target\reports\apidocs\package-search-index.js = 1754844683790
+f:\123\111\TestTask\myapp\target\reports\apidocs\script.js = 1754844683866
+f:\123\111\TestTask\myapp\target\reports\apidocs\search.js = 1754844683866
+f:\123\111\TestTask\myapp\target\reports\apidocs\stylesheet.css = 1754844683866
+f:\123\111\TestTask\myapp\target\reports\apidocs\tag-search-index.js = 1754844683803
+f:\123\111\TestTask\myapp\target\reports\apidocs\type-search-index.js = 1754844683803

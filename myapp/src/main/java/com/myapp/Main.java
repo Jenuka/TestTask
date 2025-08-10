@@ -501,7 +501,7 @@ public class Main {
             ResultSet resultSet = statement.executeQuery(cityTempDataSQL);
             if (resultSet.next()) {
                 System.out.println("Максимальная температура по городу " + resultSet.getString("CityName")
-                        + resultSet.getDouble("Temperature"));
+                        + ": " + resultSet.getDouble("Temperature"));
             }
             cityTempDataSQL = "SELECT CityName, Temperature FROM Weather_Reports WHERE CityName = '" + cityToFindMinMaxTemp
                     + "' AND Date(Time) = '" + timeString + "' ORDER BY Temperature ASC LIMIT 1";
